@@ -4,20 +4,19 @@ Calculating armstrong numbers list.
 Pow function: pow_with_no_cache
 
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407, 1634, 8208, 9474, 54748, 92727, 93084, 548834]
-Execution time: 2.541674852371216
+Execution time: 3.8693203926086426
 
 Pow function: pow_with_cache_manual
 
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407, 1634, 8208, 9474, 54748, 92727, 93084, 548834]
-Execution time: 2.5523884296417236
+Execution time: 5.081568002700806
 
 Pow function: pow_with_cache
 
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407, 1634, 8208, 9474, 54748, 92727, 93084, 548834]
-Execution time: 2.534623146057129
-CacheInfo(hits=17666610, misses=60, maxsize=128, currsize=60)
+Execution time: 2.7031915187835693
+CacheInfo(hits=5888830, misses=60, maxsize=128, currsize=60)
 
 
 
-Как я понимаю, наличие кэша слабо сказывается на скорости выполнения,
-хотя, судя по CacheInfo, он активно используется.
+Получается, что самописный кэш только замедляет работу в данном случае.
