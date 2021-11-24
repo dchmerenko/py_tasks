@@ -14,8 +14,9 @@ def pow_with_no_cache(base, exp):
     return pow(base, exp)
 
 
+cache = {}
+
 def pow_with_cache_manual(base, exp):
-    cache = {}
     if (base, exp) in cache:
         return cache[(base, exp)]
     result = pow(base, exp)
