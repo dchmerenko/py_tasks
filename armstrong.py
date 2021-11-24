@@ -6,6 +6,7 @@
 #   where power 3 is length of a number
 
 import time
+import sys
 from functools import lru_cache
 
 
@@ -28,13 +29,17 @@ def pow_with_cache(base, exp):
 
 
 def armstrong(digits, exp, pow_function):
-    return sum(pow_with_cache(digit, exp) for digit in digits)
+    return sum(pow_function(digit, exp) for digit in digits)
 
 
 def run(pow_function):
     start_time = time.time()
 
-    max_n = 1_000_000
+    max_n = 1_000
+
+    if len(sys.argv) > 1:
+        max_n = int(sys.argv[1])
+
     armstrong_numbers = []
     for n in range(max_n):
         digits = [int(n) for n in str(n)]
