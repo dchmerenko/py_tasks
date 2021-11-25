@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Calculating armstrong numbers list.
 #
 # Armstrong number example:
